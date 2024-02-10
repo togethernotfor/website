@@ -4,10 +4,10 @@ import "./globals.css";
 
 import { cn } from "@/lib/utils";
 
-export const fontSans = FontSans({
-  subsets: ["latin"],
+const fontSans = FontSans({
+  subsets: ['latin'],
   variable: "--font-sans",
-});
+})
 
 export const metadata: Metadata = {
   title: "Create Next App",
