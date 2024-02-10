@@ -14,7 +14,7 @@ export default function Greeting() {
             including maps and websites, designed to empower and uplift
             communities.
           </p>
-          <p>Check out what we've been up to and get to know us better!</p>
+          <p>Check out what we have been up to and get to know us better!</p>
         </div>
       </div>
     </div>
