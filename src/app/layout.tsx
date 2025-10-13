@@ -38,7 +38,7 @@ export const metadata: Metadata = {
       "Socially conscious software solutions for local governments, small businesses, and non-profits.",
     images: [
       {
-        url: "/og-image.jpg",
+        url: "/seo-cropped.png",
         width: 1200,
         height: 630,
         alt: "Together, Not For - Custom Software for Communities",
@@ -50,7 +50,7 @@ export const metadata: Metadata = {
     title: "Together, Not For | Custom Software for Communities",
     description:
       "Socially conscious software solutions for local governments, small businesses, and non-profits.",
-    images: ["/og-image.jpg"],
+    images: ["/seo-cropped.png"],
     // TODO: Add Twitter handle once account is created
     // creator: "@togethernotfor",
   },
