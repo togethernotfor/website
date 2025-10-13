@@ -26,7 +26,7 @@ export default function Greeting() {
               href="#contact"
               className="inline-block bg-foreground text-background px-8 py-4 rounded-lg font-semibold text-lg hover:opacity-90 transition-opacity"
             >
-              Let's Build Together
+              Let&apos;s Build Together
             </a>
           </div>
         </div>
