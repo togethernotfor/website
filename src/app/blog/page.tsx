@@ -17,7 +17,7 @@ export default function BlogPage() {
             <div className="inline-block px-8 py-12 bg-muted/30 rounded-lg">
               <h2 className="text-2xl font-semibold mb-4">Coming Soon</h2>
               <p className="text-muted-foreground max-w-md">
-                We're working on creating valuable content about civic
+                We&apos;re working on creating valuable content about civic
                 technology, community impact, and our project experiences. Check
                 back soon!
               </p>

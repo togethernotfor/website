@@ -9,12 +9,12 @@ export default function Contact() {
       <div className="max-w-4xl mx-auto text-center space-y-6 md:space-y-8">
         <div className="space-y-3 md:space-y-4">
           <h2 className="text-3xl md:text-5xl font-bold">
-            Let's build something together
+            Let&apos;s build something together
           </h2>
           <p className="text-base md:text-xl max-w-2xl mx-auto">
-            Whether you're a local government looking to increase transparency,
+            Whether you&apos;re a local government looking to increase transparency,
             a small business needing a custom solution, or a non-profit ready to
-            amplify your impact — we'd love to hear from you.
+            amplify your impact — we&apos;d love to hear from you.
           </p>
         </div>
 
