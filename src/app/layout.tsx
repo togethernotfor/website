@@ -31,14 +31,14 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://togethernotfor.com",
+    url: "https://www.togethernotfor.com",
     siteName: "Together, Not For",
     title: "Together, Not For | Custom Software for Communities",
     description:
       "Socially conscious software solutions for local governments, small businesses, and non-profits.",
     images: [
       {
-        url: "/seo-cropped.png",
+        url: "https://www.togethernotfor.com/seo-cropped.png",
         width: 1200,
         height: 630,
         alt: "Together, Not For - Custom Software for Communities",
@@ -50,7 +50,7 @@ export const metadata: Metadata = {
     title: "Together, Not For | Custom Software for Communities",
     description:
       "Socially conscious software solutions for local governments, small businesses, and non-profits.",
-    images: ["/seo-cropped.png"],
+    images: ["https://www.togethernotfor.com/seo-cropped.png"],
     // TODO: Add Twitter handle once account is created
     // creator: "@togethernotfor",
   },
