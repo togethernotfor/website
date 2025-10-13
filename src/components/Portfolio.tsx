@@ -1,31 +1,46 @@
+"use client";
+
 import { Card, CardContent } from "@/components/ui/card";
 import { projects } from "@/data/projects";
 import Image from "next/image";
 import Link from "next/link";
 import { ExternalLink } from "lucide-react";
+import { motion } from "motion/react";
 
 export default function Portfolio() {
   return (
     <section className="py-8 md:py-20 px-5 md:px-8">
       <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-8 md:mb-12">
+        <motion.div
+          className="text-center mb-8 md:mb-12"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+        >
           <h2 className="text-2xl md:text-4xl font-bold mb-2 md:mb-4">
             Our Work
           </h2>
           <p className="text-sm md:text-xl text-muted-foreground max-w-2xl mx-auto">
             Real projects making a real difference
           </p>
-        </div>
+        </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
-          {projects.map((project) => (
-            <Link
-              href={project.href}
+          {projects.map((project, index) => (
+            <motion.div
               key={project.id}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: index * 0.2 }}
             >
+              <Link
+                href={project.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group block"
+              >
               <Card className="border border-border/50 shadow-none hover:border-border hover:shadow-md transition-all overflow-hidden h-full">
                 <CardContent className="p-0">
                   <div className="relative aspect-video overflow-hidden bg-muted">
@@ -67,7 +82,8 @@ export default function Portfolio() {
                   </div>
                 </CardContent>
               </Card>
-            </Link>
+              </Link>
+            </motion.div>
           ))}
         </div>
       </div>

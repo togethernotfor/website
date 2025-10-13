@@ -1,4 +1,7 @@
+"use client";
+
 import { Mail } from "lucide-react";
+import { motion } from "motion/react";
 
 export default function Contact() {
   return (
@@ -6,7 +9,13 @@ export default function Contact() {
       id="contact"
       className="py-16 md:py-24 px-5 md:px-8 bg-cover-yellow"
     >
-      <div className="max-w-4xl mx-auto text-center space-y-6 md:space-y-8">
+      <motion.div
+        className="max-w-4xl mx-auto text-center space-y-6 md:space-y-8"
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6 }}
+      >
         <div className="space-y-3 md:space-y-4">
           <h2 className="text-3xl md:text-5xl font-bold">
             Let&apos;s build something together
@@ -31,7 +40,7 @@ export default function Contact() {
         <p className="text-sm md:text-base text-foreground/80">
           We typically respond within 1-2 business days
         </p>
-      </div>
+      </motion.div>
     </section>
   );
 }

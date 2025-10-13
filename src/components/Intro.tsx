@@ -4,9 +4,9 @@ export default function Greeting() {
       <div className="max-w-4xl mx-auto w-full px-6 py-12 md:px-8">
         <div className="space-y-6">
           <div className="space-y-2">
-            <h1 className="text-4xl md:text-5xl font-bold">Hello,</h1>
+            <h1 className="text-4xl md:text-5xl font-bold">Hello, we are</h1>
             <h1 className="text-4xl md:text-5xl font-bold">
-              welcome to together, not for
+              together, not for
             </h1>
           </div>
 

@@ -1,4 +1,7 @@
+"use client";
+
 import { Building2, Store, Heart } from "lucide-react";
+import { motion } from "motion/react";
 
 export default function WhoWeServe() {
   const audiences = [
@@ -28,7 +31,13 @@ export default function WhoWeServe() {
   return (
     <section className="py-8 md:py-20 px-5 md:px-8">
       <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-6 md:mb-12">
+        <motion.div
+          className="text-center mb-6 md:mb-12"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+        >
           <h2 className="text-2xl md:text-4xl font-bold mb-2 md:mb-4">
             Who We Serve
           </h2>
@@ -36,15 +45,19 @@ export default function WhoWeServe() {
             We partner with organizations making a difference in their
             communities
           </p>
-        </div>
+        </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-0 md:gap-10">
           {audiences.map((audience, index) => {
             const Icon = audience.icon;
             return (
-              <div
+              <motion.div
                 key={index}
                 className="flex flex-col items-center text-center space-y-2 md:space-y-4 p-2 md:p-6 rounded-lg hover:bg-accent/50 transition-colors"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.2 }}
               >
                 <div className="w-12 h-12 md:w-16 md:h-16 rounded-full bg-cover-yellow flex items-center justify-center">
                   <Icon className="w-6 h-6 md:w-8 md:h-8" strokeWidth={2} />
@@ -58,7 +71,7 @@ export default function WhoWeServe() {
                 <p className="hidden lg:block text-xs md:text-sm text-muted-foreground italic">
                   {audience.examples}
                 </p>
-              </div>
+              </motion.div>
             );
           })}
         </div>
