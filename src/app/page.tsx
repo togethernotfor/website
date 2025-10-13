@@ -1,7 +1,10 @@
+import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import Greeting from "@/components/Intro";
 import Portfolio from "@/components/Portfolio";
+import Values from "@/components/Values";
+import WhoWeServe from "@/components/WhoWeServe";
 import { Separator } from "@/components/ui/separator";
 
 export default function Home() {
@@ -11,7 +14,10 @@ export default function Home() {
       <div>
         <Header />
         <Greeting />
+        <WhoWeServe />
+        <Values />
         <Portfolio />
+        <Contact />
       </div>
       <div>
         <Separator />

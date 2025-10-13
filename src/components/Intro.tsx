@@ -1,20 +1,34 @@
 export default function Greeting() {
   return (
-    <div className="flex  min-h-[26rem] flex-col justify-between bg-cover-yellow relative">
-      <div className="absolute left-1/2 transform -translate-x-1/2 bottom-0 w-full p-3">
-        <div className="pb-5">
-          <h1 className="text-4xl bold">Hello,</h1>
-          <h1 className="text-4xl bold">welcome to </h1>
-          <h1 className="text-4xl bold">together, not for</h1>
-        </div>
-        <div className="space-y-2">
-          <p>We are a socially conscious software solutions company.</p>
-          <p>
-            Our mission is to provide tailored customer software solutions,
-            including maps and websites, designed to empower and uplift
-            communities.
-          </p>
-          <p>Check out what we've been up to and get to know us better!</p>
+    <div className="flex min-h-[32rem] flex-col justify-center bg-cover-yellow relative">
+      <div className="max-w-4xl mx-auto w-full px-6 py-12 md:px-8">
+        <div className="space-y-6">
+          <div className="space-y-2">
+            <h1 className="text-4xl md:text-5xl font-bold">Hello,</h1>
+            <h1 className="text-4xl md:text-5xl font-bold">
+              welcome to together, not for
+            </h1>
+          </div>
+
+          <div className="space-y-4 text-lg md:text-xl max-w-2xl">
+            <p className="font-semibold">
+              We are a socially conscious software solutions company.
+            </p>
+            <p>
+              Our mission is to provide custom software solutions for local
+              governments, small businesses, and non-profits — including maps
+              and websites, designed to empower and uplift communities.
+            </p>
+          </div>
+
+          <div className="pt-4">
+            <a
+              href="#contact"
+              className="inline-block bg-foreground text-background px-8 py-4 rounded-lg font-semibold text-lg hover:opacity-90 transition-opacity"
+            >
+              Let's Build Together
+            </a>
+          </div>
         </div>
       </div>
     </div>

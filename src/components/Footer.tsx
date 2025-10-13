@@ -9,7 +9,7 @@ export default function Footer() {
       </h3>
       <SocialShareLinks />
       <div className="font-sans text-xs opacity-30 md:text-sm">
-        together, not for © 2024
+        together, not for © 2025
       </div>
     </div>
   );
