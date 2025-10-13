@@ -23,7 +23,7 @@ const config = {
         sans: ["var(--font-sans)", ...fontFamily.sans],
       },
       colors: {
-        "cover-yellow": "#FFE548",
+        "cover-yellow": "hsl(var(--cover-yellow))",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
