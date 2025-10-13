@@ -44,6 +44,38 @@ npm run start    # Start production server
 npm run lint     # Run ESLint
 ```
 
+## Deployment
+
+This site is deployed on **Vercel** with automatic deployments from the `main` branch.
+
+### Vercel Configuration
+
+- **Framework Preset**: Next.js
+- **Build Command**: `npm run build`
+- **Output Directory**: `.next` (automatic)
+- **Install Command**: `npm install`
+- **Node Version**: 18.x
+
+### Environment Variables
+
+No environment variables are currently required for production builds.
+
+### Deploy to Vercel
+
+The easiest way to deploy this Next.js app is through [Vercel](https://vercel.com):
+
+1. Push your code to a Git repository (GitHub, GitLab, or Bitbucket)
+2. Import your repository to Vercel
+3. Vercel will automatically detect Next.js and configure the build settings
+4. Every push to `main` will automatically trigger a new deployment
+5. Pull requests will generate preview deployments
+
+Alternatively, deploy using the [Vercel CLI](https://vercel.com/docs/cli):
+
+```bash
+npm i -g vercel
+vercel
+```
 
 ## Project Structure
 
