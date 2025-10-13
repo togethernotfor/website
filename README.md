@@ -13,6 +13,7 @@ Together, Not For provides custom software solutions designed to empower and upl
 - **Styling**: Tailwind CSS
 - **UI Components**: shadcn/ui (Radix UI primitives)
 - **Icons**: Lucide React
+- **Animations**: Motion (formerly Framer Motion)
 - **Theme**: next-themes (dark mode support)
 - **Deployment**: Vercel (recommended)
 
@@ -127,10 +128,11 @@ public/
 
 ### Accessibility
 
-- `prefers-reduced-motion` support
+- `prefers-reduced-motion` support for animations
 - Semantic HTML elements
 - ARIA labels where needed
 - Keyboard navigation support
+- Theme toggle with full keyboard accessibility
 
 ### Performance
 
@@ -214,15 +216,20 @@ Blog infrastructure is ready. Edit `src/data/blog-posts.ts` when ready to publis
 - System preference detection
 - Persistent theme selection
 
+## Completed Phases
+
+✅ **Phase 1**: Landing Page Modernization (Hero, Who We Serve, Values, Portfolio, Contact)
+✅ **Phase 2**: Blog Infrastructure (Routes, components, data structure ready)
+✅ **Phase 3**: Brand Animation Enhancement (Motion scroll animations)
+✅ **Phase 4**: Dark Mode Toggle (shadcn/ui implementation with theme persistence)
+
 ## Future Enhancements
 
 See `future/modernization-plan.md` for detailed roadmap:
 
-- **Phase 3**: Motion animations with Framer Motion
-- **Phase 4**: Dark mode toggle UI
-- **Phase 5**: Blog activation
-- **Phase 6**: Portfolio case studies
-- **Phase 7**: Analytics & performance monitoring
+- **Phase 4**: Blog Content Launch (First 3-5 posts)
+- **Phase 5**: Interactive Features (Filtering, search, testimonials)
+- **Phase 6**: Growth Features (Analytics, A/B testing, lead magnets)
 
 ## Documentation
 
