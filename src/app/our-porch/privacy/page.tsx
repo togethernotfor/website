@@ -4,8 +4,40 @@ import { Separator } from "@/components/ui/separator";
 import { ModeToggle } from "@/components/mode-toggle";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy - Our Porch",
-  description: "Privacy Policy for Our Porch - Neighbor Relationship Management App",
+  title: "Privacy Policy - Our Porch | Privacy-First Neighbor App",
+  description:
+    "Our Porch Privacy Policy: All your neighbor data stays on your device. No cloud sync, no account required, no tracking. Complete privacy and control over your neighborhood connections.",
+  keywords: [
+    "privacy policy",
+    "data privacy",
+    "local storage",
+    "no cloud sync",
+    "neighbor privacy",
+    "offline app",
+  ],
+  openGraph: {
+    title: "Privacy Policy - Our Porch",
+    description:
+      "All your data stays on your device. No cloud sync, no account required, complete privacy.",
+    type: "website",
+    url: "https://togethernotfor.com/our-porch/privacy",
+    siteName: "Our Porch",
+    images: [
+      {
+        url: "https://www.togethernotfor.com/our-porch/icon1-cropped.png",
+        width: 1200,
+        height: 630,
+        alt: "Our Porch App Icon",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Privacy Policy - Our Porch",
+    description:
+      "All your data stays on your device. No cloud sync, no account required, complete privacy.",
+    images: ["https://www.togethernotfor.com/our-porch/icon1-cropped.png"],
+  },
 };
 
 export default function OurPorchPrivacy() {

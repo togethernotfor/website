@@ -10,16 +10,44 @@ import { Separator } from "@/components/ui/separator";
 import { ModeToggle } from "@/components/mode-toggle";
 
 export const metadata: Metadata = {
-  title: "Our Porch - Neighbor Relationship Management App | Support",
+  title: "Our Porch - Build Stronger Neighborhood Connections | Support",
   description:
-    "Our Porch helps you build stronger neighborhood connections through smart reminders, contact tracking, and household management. Download now for iOS and Android.",
+    "Our Porch is a privacy-first mobile app that helps you stay connected with your neighbors through smart reminders and local contact management. No cloud sync, all data stays on your device. Download for iOS and Android.",
   keywords: [
     "neighborhood app",
-    "neighbor management",
+    "neighbor management app",
     "community building",
     "contact reminders",
     "local relationships",
+    "neighbor tracking",
+    "privacy app",
+    "local storage",
+    "community connections",
+    "neighbor reminder app",
   ],
+  openGraph: {
+    title: "Our Porch - Build Stronger Neighborhood Connections",
+    description:
+      "Stay connected with your neighbors through smart reminders and local contact management. Privacy-first, all data stays on your device.",
+    type: "website",
+    url: "https://togethernotfor.com/our-porch/support",
+    siteName: "Our Porch",
+    images: [
+      {
+        url: "https://www.togethernotfor.com/our-porch/icon1-cropped.png",
+        width: 1200,
+        height: 630,
+        alt: "Our Porch App Icon",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Our Porch - Build Stronger Neighborhood Connections",
+    description:
+      "Stay connected with your neighbors through smart reminders. Privacy-first, all data stays on your device.",
+    images: ["https://www.togethernotfor.com/our-porch/icon1-cropped.png"],
+  },
 };
 
 export default function OurPorchSupport() {
