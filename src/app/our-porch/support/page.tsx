@@ -12,7 +12,7 @@ import { ModeToggle } from "@/components/mode-toggle";
 export const metadata: Metadata = {
   title: "Our Porch - Build Stronger Neighborhood Connections | Support",
   description:
-    "Our Porch is a privacy-first mobile app that helps you stay connected with your neighbors through smart reminders and local contact management. No cloud sync, all data stays on your device. Download for iOS and Android.",
+    "Our Porch is a privacy-first mobile app that helps you stay connected with your neighbors through smart reminders, contact tracking, and personalized organization. No cloud sync, all data stays on your device. Download now for iOS.",
   keywords: [
     "neighborhood app",
     "neighbor management app",
@@ -70,7 +70,7 @@ export default function OurPorchSupport() {
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
             Our Porch helps you nurture meaningful relationships with the people
             who live around you. Stay connected with your neighbors through
-            gentle reminders, and contact tracking.
+            gentle reminders, contact tracking, and personalized organization.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
             <Button
@@ -196,11 +196,11 @@ export default function OurPorchSupport() {
               />
               <FAQItem
                 question="Can I export or backup my data?"
-                answer="Yes. You can export your entire database as a JSON file and import it on another device or after reinstalling the app. This feature is available in Settings > Developer Tools."
+                answer="Yes. You can export your entire database as a JSON file and import it on another device or after reinstalling the app. This feature is available in Settings > Data Management."
               />
               <FAQItem
                 question="What platforms are supported?"
-                answer="Our Porch is available for iOS and Android devices. The app is built with React Native and Expo for a native mobile experience."
+                answer="Our Porch is currently available for iOS devices (iPhone and iPad). Android support is planned for a future release. The app is built with React Native and Expo for a native mobile experience."
               />
               <FAQItem
                 question="Do I need to create an account?"
@@ -229,7 +229,6 @@ export default function OurPorchSupport() {
             <div className="bg-muted/50 dark:bg-muted/20 rounded-lg p-6 space-y-2">
               <ul className="space-y-2 text-muted-foreground">
                 <li>• iOS 13.4 or later (iPhone/iPad)</li>
-                <li>• Android 6.0 (API level 23) or later</li>
                 <li>• Notification permissions (optional, for reminders)</li>
                 <li>
                   • Contact permissions (optional, for importing neighbors)
