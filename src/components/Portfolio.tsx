@@ -37,51 +37,60 @@ export default function Portfolio() {
             >
               <Link
                 href={project.href}
-                target="_blank"
-                rel="noopener noreferrer"
+                target={project.href.startsWith("/") ? undefined : "_blank"}
+                rel={
+                  project.href.startsWith("/")
+                    ? undefined
+                    : "noopener noreferrer"
+                }
                 className="group block"
               >
-              <Card className="border border-border/50 shadow-none hover:border-border hover:shadow-md transition-all overflow-hidden h-full">
-                <CardContent className="p-0">
-                  <div className="relative aspect-video overflow-hidden bg-muted">
-                    <Image
-                      src={project.image}
-                      alt={project.imageAlt}
-                      fill
-                      className="object-cover group-hover:scale-105 transition-transform duration-300"
-                      sizes="(max-width: 768px) 100vw, 50vw"
-                      style={
-                        project.id === "policy-eagle"
-                          ? { objectPosition: "top" }
-                          : undefined
-                      }
-                    />
-                  </div>
-                  <div className="p-5 md:p-6 space-y-2">
-                    <div className="flex items-start justify-between gap-2">
-                      <h3 className="text-xl md:text-2xl font-semibold">
-                        {project.title}
-                      </h3>
-                      <ExternalLink className="w-4 h-4 md:w-5 md:h-5 text-muted-foreground group-hover:text-foreground transition-colors flex-shrink-0 mt-1" />
+                <Card className="border border-border/50 shadow-none hover:border-border hover:shadow-md transition-all overflow-hidden h-full">
+                  <CardContent className="p-0">
+                    <div
+                    className="relative aspect-video overflow-hidden bg-muted"
+                    style={project.id === "our-porch" ? { backgroundColor: "#FFF4E1" } : undefined}
+                  >
+                      <Image
+                        src={project.image}
+                        alt={project.imageAlt}
+                        fill
+                        className="object-cover group-hover:scale-105 transition-transform duration-300"
+                        sizes="(max-width: 768px) 100vw, 50vw"
+                        style={
+                          project.id === "policy-eagle"
+                            ? { objectPosition: "top" }
+                            : project.id === "our-porch"
+                            ? { objectFit: "contain" }
+                            : undefined
+                        }
+                      />
                     </div>
-                    <p className="text-sm md:text-base text-muted-foreground">
-                      {project.description}
-                    </p>
-                    {project.tags && project.tags.length > 0 && (
-                      <div className="flex flex-wrap gap-2 pt-2">
-                        {project.tags.map((tag, index) => (
-                          <span
-                            key={index}
-                            className="text-xs px-2 py-1 bg-muted rounded-md text-muted-foreground"
-                          >
-                            {tag}
-                          </span>
-                        ))}
+                    <div className="p-5 md:p-6 space-y-2">
+                      <div className="flex items-start justify-between gap-2">
+                        <h3 className="text-xl md:text-2xl font-semibold">
+                          {project.title}
+                        </h3>
+                        <ExternalLink className="w-4 h-4 md:w-5 md:h-5 text-muted-foreground group-hover:text-foreground transition-colors flex-shrink-0 mt-1" />
                       </div>
-                    )}
-                  </div>
-                </CardContent>
-              </Card>
+                      <p className="text-sm md:text-base text-muted-foreground">
+                        {project.description}
+                      </p>
+                      {project.tags && project.tags.length > 0 && (
+                        <div className="flex flex-wrap gap-2 pt-2">
+                          {project.tags.map((tag, index) => (
+                            <span
+                              key={index}
+                              className="text-xs px-2 py-1 bg-muted rounded-md text-muted-foreground"
+                            >
+                              {tag}
+                            </span>
+                          ))}
+                        </div>
+                      )}
+                    </div>
+                  </CardContent>
+                </Card>
               </Link>
             </motion.div>
           ))}
