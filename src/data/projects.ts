@@ -1,5 +1,6 @@
 import { StaticImageData } from "next/image";
 import bike_house from "../../public/bike-house_1_50.webp";
+import bingo_cards from "../../public/bingo-cards.png";
 import our_porch from "../../public/our-porch/icon1-cropped-trans-2.png";
 import policy_eagle from "../../public/policy-eagle.jpg";
 import voterlens_image from "../../public/voterlens.png";
@@ -38,6 +39,19 @@ export const projects: Project[] = [
     tags: ["civic tech", "data visualization", "voter analytics", "government"],
   },
   {
+    id: "bingo-cards",
+    title: "Bingo Cards",
+    description: "Interactive bingo card generator and game platform",
+    longDescription:
+      "A web application for creating and playing custom bingo cards with an intuitive interface and real-time game management.",
+    category: "community",
+    image: bingo_cards,
+    imageAlt: "Bingo Cards application screenshot",
+    href: "https://bingo-cards-delta.vercel.app/",
+    featured: true,
+    tags: ["web app", "games", "interactive"],
+  },
+  {
     id: "our-porch",
     title: "Our Porch",
     description:
@@ -52,19 +66,6 @@ export const projects: Project[] = [
     tags: ["mobile app", "privacy-first", "community building"],
   },
   {
-    id: "bike-house",
-    title: "Bike House",
-    description: "Customer sign-in and management system for local bike shop",
-    longDescription:
-      "A streamlined customer management platform that helps a local bike shop track customer visits, manage memberships, and improve service delivery.",
-    category: "business",
-    image: bike_house,
-    imageAlt: "Screenshot of the Bike House customer sign-in website",
-    href: "https://bikehouse.vercel.app/",
-    featured: true,
-    tags: ["web app", "customer management", "small business"],
-  },
-  {
     id: "policy-eagle",
     title: "Policy Eagle",
     description: "Legislation tracking platform for civic engagement",
@@ -76,5 +77,18 @@ export const projects: Project[] = [
     href: "https://policy-eagle.vercel.app/",
     featured: true,
     tags: ["civic tech", "transparency", "government"],
+  },
+  {
+    id: "bike-house",
+    title: "Bike House",
+    description: "Customer sign-in and management system for local bike shop",
+    longDescription:
+      "A streamlined customer management platform that helps a local bike shop track customer visits, manage memberships, and improve service delivery.",
+    category: "business",
+    image: bike_house,
+    imageAlt: "Screenshot of the Bike House customer sign-in website",
+    href: "https://bikehouse.vercel.app/",
+    featured: true,
+    tags: ["web app", "customer management", "small business"],
   },
 ];

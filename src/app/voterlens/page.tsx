@@ -30,11 +30,11 @@ export const metadata: Metadata = {
     description:
       "Explore comprehensive voter data insights including registration statistics, party affiliation, and voting history.",
     type: "website",
-    url: "https://website-git-staging-togethernotfors-projects.vercel.app/voterlens",
+    url: "https://www.togethernotfor.com/voterlens",
     siteName: "VoterLens",
     images: [
       {
-        url: "https://website-git-staging-togethernotfors-projects.vercel.app/voterlens.png",
+        url: "https://www.togethernotfor.com/voterlens.png",
         width: 1200,
         height: 630,
         alt: "VoterLens - Voter Data Insights",
@@ -46,9 +46,7 @@ export const metadata: Metadata = {
     title: "VoterLens - Voter Data Insights",
     description:
       "Comprehensive voter data insights including registration statistics, party affiliation, and voting history.",
-    images: [
-      "https://website-git-staging-togethernotfors-projects.vercel.app/voterlens.png",
-    ],
+    images: ["https://www.togethernotfor.com/voterlens.png"],
   },
 };
 
