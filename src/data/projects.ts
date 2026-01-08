@@ -2,7 +2,7 @@ import { StaticImageData } from "next/image";
 import bike_house from "../../public/bike-house_1_50.webp";
 import bingo_cards from "../../public/bingo-cards.png";
 import our_porch from "../../public/our-porch/icon1-cropped-trans-2.png";
-import policy_eagle from "../../public/policy-eagle.jpg";
+import policy_eagle from "../../public/policy-eagle.png";
 import voterlens_image from "../../public/voterlens.png";
 
 export interface Project {

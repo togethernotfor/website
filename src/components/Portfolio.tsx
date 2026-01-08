@@ -2,10 +2,10 @@
 
 import { Card, CardContent } from "@/components/ui/card";
 import { projects } from "@/data/projects";
-import Image from "next/image";
-import Link from "next/link";
 import { ExternalLink } from "lucide-react";
 import { motion } from "motion/react";
+import Image from "next/image";
+import Link from "next/link";
 
 export default function Portfolio() {
   return (
@@ -48,9 +48,13 @@ export default function Portfolio() {
                 <Card className="border border-border/50 shadow-none hover:border-border hover:shadow-md transition-all overflow-hidden h-full">
                   <CardContent className="p-0">
                     <div
-                    className="relative aspect-video overflow-hidden bg-muted"
-                    style={project.id === "our-porch" ? { backgroundColor: "#FFF4E1" } : undefined}
-                  >
+                      className="relative aspect-video overflow-hidden bg-muted"
+                      style={
+                        project.id === "our-porch"
+                          ? { backgroundColor: "#FFF4E1" }
+                          : undefined
+                      }
+                    >
                       <Image
                         src={project.image}
                         alt={project.imageAlt}
@@ -59,7 +63,7 @@ export default function Portfolio() {
                         sizes="(max-width: 768px) 100vw, 50vw"
                         style={
                           project.id === "policy-eagle"
-                            ? { objectPosition: "top" }
+                            ? { objectPosition: "center" }
                             : project.id === "our-porch"
                             ? { objectFit: "contain" }
                             : undefined
