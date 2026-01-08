@@ -1,4 +1,5 @@
 import Header from "@/components/Header";
+import Contact from "@/components/Contact";
 import SocialShareLinks from "@/components/SocialShareLinks";
 import {
   Card,
@@ -8,7 +9,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
-import { Mail, MapPin, TrendingUp, Users, Vote } from "lucide-react";
+import { MapPin, TrendingUp, Users, Vote } from "lucide-react";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -410,41 +411,11 @@ export default function VoterLensPage() {
         </section>
 
         {/* Contact Section */}
-        <section id="contact" className="mb-8 md:mb-12">
-          <Card
-            style={{ backgroundColor: "rgba(43, 59, 100, 0.08)" }}
-            className="dark:bg-[rgba(107,143,199,0.08)]"
-          >
-            <CardHeader>
-              <CardTitle className="text-center text-3xl md:text-5xl">
-                Let&apos;s build something together
-              </CardTitle>
-              <CardDescription className="text-base md:text-xl max-w-2xl mx-auto text-center">
-                Whether you&apos;re a local government looking to increase
-                transparency, a small business needing a custom solution, or a
-                non-profit ready to amplify your impact — we&apos;d love to hear
-                from you.
-              </CardDescription>
-            </CardHeader>
-            <CardContent>
-              <div className="flex flex-col items-center space-y-4">
-                <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-                  <a
-                    href="mailto:info@togethernotfor.com?subject=Let's%20Collaborate!&body=Hi%20Together%20Not%20For%20team%2C%0A%0AI%20came%20across%20your%20work%20and%20would%20love%20to%20discuss%20a%20potential%20project.%0A%0ABest%2C%0A[Your%20Name]"
-                    className="inline-flex items-center gap-2 px-8 py-4 rounded-lg font-semibold text-lg hover:opacity-90 transition-opacity w-full sm:w-auto justify-center"
-                    style={{ backgroundColor: "#B82221", color: "#FFFEFC" }}
-                  >
-                    <Mail className="w-5 h-5" />
-                    Get in Touch
-                  </a>
-                </div>
-                <p className="text-sm md:text-base text-muted-foreground">
-                  We typically respond within 1-2 business days
-                </p>
-              </div>
-            </CardContent>
-          </Card>
-        </section>
+        <Contact
+          variant="card"
+          animated={false}
+          buttonStyle={{ backgroundColor: "#B82221", color: "#FFFEFC" }}
+        />
       </main>
 
       <Separator />
