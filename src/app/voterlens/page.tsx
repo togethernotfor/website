@@ -1,5 +1,5 @@
-import Header from "@/components/Header";
 import Contact from "@/components/Contact";
+import Header from "@/components/Header";
 import SocialShareLinks from "@/components/SocialShareLinks";
 import {
   Card,
@@ -32,12 +32,23 @@ export const metadata: Metadata = {
     type: "website",
     url: "https://togethernotfor.com/voterlens",
     siteName: "VoterLens",
+    images: [
+      {
+        url: "https://website-git-staging-togethernotfors-projects.vercel.app/voterlens.png",
+        width: 1200,
+        height: 630,
+        alt: "VoterLens - Voter Data Insights",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "VoterLens - Voter Data Insights",
     description:
       "Comprehensive voter data insights including registration statistics, party affiliation, and voting history.",
+    images: [
+      "https://website-git-staging-togethernotfors-projects.vercel.app/voterlens.png",
+    ],
   },
 };
 
