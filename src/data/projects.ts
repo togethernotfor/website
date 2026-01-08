@@ -1,7 +1,8 @@
 import { StaticImageData } from "next/image";
 import bike_house from "../../public/bike-house_1_50.webp";
-import policy_eagle from "../../public/policy-eagle.jpg";
 import our_porch from "../../public/our-porch/icon1-cropped-trans-2.png";
+import policy_eagle from "../../public/policy-eagle.jpg";
+import voterlens_image from "../../public/voterlens.png";
 
 export interface Project {
   id: string;
@@ -24,9 +25,23 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    id: "voterlens",
+    title: "VoterLens",
+    description: "Comprehensive voter data insights and analytics platform",
+    longDescription:
+      "A data visualization platform that provides insights into voter registration, party affiliation, precinct-level details, and voting history. Designed to make voter data accessible and understandable for civic engagement.",
+    category: "government",
+    image: voterlens_image,
+    imageAlt: "VoterLens voter data insights dashboard",
+    href: "/voterlens",
+    featured: true,
+    tags: ["civic tech", "data visualization", "voter analytics", "government"],
+  },
+  {
     id: "our-porch",
     title: "Our Porch",
-    description: "Privacy-first mobile app for building stronger neighborhood connections",
+    description:
+      "Privacy-first mobile app for building stronger neighborhood connections",
     longDescription:
       "A mobile app that helps you nurture meaningful relationships with your neighbors through smart reminders, contact tracking, and personalized organization. All data stays on your device with no cloud sync required.",
     category: "community",
