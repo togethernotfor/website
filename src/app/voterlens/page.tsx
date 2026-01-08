@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     description:
       "Explore comprehensive voter data insights including registration statistics, party affiliation, and voting history.",
     type: "website",
-    url: "https://togethernotfor.com/voterlens",
+    url: "https://website-git-staging-togethernotfors-projects.vercel.app/voterlens",
     siteName: "VoterLens",
     images: [
       {
