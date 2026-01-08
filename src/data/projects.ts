@@ -2,7 +2,7 @@ import { StaticImageData } from "next/image";
 import bike_house from "../../public/bike-house_1_50.webp";
 import bingo_cards from "../../public/bingo-cards.png";
 import our_porch from "../../public/our-porch/icon1-cropped-trans-2.png";
-import policy_eagle from "../../public/policy-eagle.jpg";
+import policy_eagle from "../../public/policy-eagle.png";
 import voterlens_image from "../../public/voterlens.png";
 
 export interface Project {
@@ -38,19 +38,19 @@ export const projects: Project[] = [
     featured: true,
     tags: ["civic tech", "data visualization", "voter analytics", "government"],
   },
-  {
-    id: "bingo-cards",
-    title: "Bingo Cards",
-    description: "Interactive bingo card generator and game platform",
-    longDescription:
-      "A web application for creating and playing custom bingo cards with an intuitive interface and real-time game management.",
-    category: "community",
-    image: bingo_cards,
-    imageAlt: "Bingo Cards application screenshot",
-    href: "https://bingo-cards-delta.vercel.app/",
-    featured: true,
-    tags: ["web app", "games", "interactive"],
-  },
+  // {
+  //   id: "bingo-cards",
+  //   title: "2026 Bingo Card Generator",
+  //   description: "Interactive bingo card generator",
+  //   longDescription:
+  //     "A web application for creating and playing custom bingo cards with an intuitive interface and real-time game management.",
+  //   category: "community",
+  //   image: bingo_cards,
+  //   imageAlt: "Bingo Cards application screenshot",
+  //   href: "https://bingo-cards-delta.vercel.app/",
+  //   featured: true,
+  //   tags: ["web app", "games", "interactive"],
+  // },
   {
     id: "our-porch",
     title: "Our Porch",
