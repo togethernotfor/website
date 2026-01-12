@@ -10,6 +10,11 @@ const fontSans = FontSans({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(
+    process.env.NODE_ENV === "production"
+      ? "https://www.togethernotfor.com"
+      : "http://localhost:3000"
+  ),
   title: "Together, Not For | Custom Software for Communities",
   description:
     "Socially conscious software solutions for local governments, small businesses, and non-profits. We build custom maps, websites, and applications designed to empower and uplift communities.",

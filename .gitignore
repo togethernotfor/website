@@ -37,3 +37,10 @@ next-env.d.ts
 future/
 CLAUDE.md
 .cursor/
+
+# large data files (source data should be processed before deployment)
+public/data/*.csv
+public/data/*.geojson
+public/data/*.geojson.gz
+# Keep the directory structure
+!public/data/.gitkeep
