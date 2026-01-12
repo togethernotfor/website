@@ -1,7 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
- 
+
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -37,7 +37,7 @@
     /* Custom yellow color - bright in light mode */
     --cover-yellow: 52 100% 64%;
   }
- 
+
   .dark {
     --background: 222.2 84% 4.9%;
     --foreground: 210 40% 98%;
@@ -70,8 +70,14 @@
     /* Custom yellow color - muted/darker in dark mode for less contrast */
     --cover-yellow: 48 70% 45%;
   }
+  .maplibregl-popup-content {
+    @apply bg-transparent! shadow-none! p-0! rounded-none!;
+  }
+  .maplibregl-popup-tip {
+    @apply hidden!;
+  }
 }
- 
+
 @layer base {
   * {
     @apply border-border;
