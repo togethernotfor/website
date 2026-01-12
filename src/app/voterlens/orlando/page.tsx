@@ -168,14 +168,19 @@ export default function OrlandoVoterLensPage() {
                   />
                 </div>
               </div>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              
+              {/* Data aligned with progress bar */}
+              <div className="flex flex-col sm:flex-row gap-4 sm:gap-0">
                 {/* Democrat */}
-                <div className="space-y-2">
-                  <div className="flex items-center justify-between">
-                    <span className="text-sm font-medium text-blue-600">
+                <div 
+                  className="space-y-2 px-2 w-full sm:w-auto"
+                  style={{ width: `${demPercent}%` }}
+                >
+                  <div className="flex items-center gap-2">
+                    <span className="text-sm font-medium text-blue-600 whitespace-nowrap">
                       Democrat (D)
                     </span>
-                    <span className="text-sm text-muted-foreground">
+                    <span className="text-sm text-muted-foreground whitespace-nowrap">
                       {demPercent}%
                     </span>
                   </div>
@@ -185,12 +190,15 @@ export default function OrlandoVoterLensPage() {
                 </div>
 
                 {/* Republican */}
-                <div className="space-y-2">
-                  <div className="flex items-center justify-between">
-                    <span className="text-sm font-medium text-red-600">
+                <div 
+                  className="space-y-2 px-2 w-full sm:w-auto"
+                  style={{ width: `${repPercent}%` }}
+                >
+                  <div className="flex items-center gap-2">
+                    <span className="text-sm font-medium text-red-600 whitespace-nowrap">
                       Republican (R)
                     </span>
-                    <span className="text-sm text-muted-foreground">
+                    <span className="text-sm text-muted-foreground whitespace-nowrap">
                       {repPercent}%
                     </span>
                   </div>
@@ -200,12 +208,15 @@ export default function OrlandoVoterLensPage() {
                 </div>
 
                 {/* Other */}
-                <div className="space-y-2">
-                  <div className="flex items-center justify-between">
-                    <span className="text-sm font-medium text-gray-600">
+                <div 
+                  className="space-y-2 px-2 w-full sm:w-auto"
+                  style={{ width: `${otherPercent}%` }}
+                >
+                  <div className="flex items-center gap-2">
+                    <span className="text-sm font-medium text-gray-600 whitespace-nowrap">
                       Other
                     </span>
-                    <span className="text-sm text-muted-foreground">
+                    <span className="text-sm text-muted-foreground whitespace-nowrap">
                       {otherPercent}%
                     </span>
                   </div>
