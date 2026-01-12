@@ -4,9 +4,11 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "prebuild": "node scripts/process-voter-data.js",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "process-data": "node scripts/process-voter-data.js"
   },
   "dependencies": {
     "@radix-ui/react-dropdown-menu": "^2.1.16",

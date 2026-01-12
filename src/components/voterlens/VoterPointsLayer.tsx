@@ -289,96 +289,19 @@ export function VoterPointsLayer() {
         setLoading(true);
         setError(null);
 
-        // Fetch the CSV file
+        // Fetch the optimized GeoJSON file (compressed version served automatically by Vercel)
         const response = await fetch(
-          "/data/orange-county-voters-geocoded.csv"
+          "/data/orange-county-voters-geocoded.geojson"
         );
+        
         if (!response.ok) {
-          throw new Error(`Failed to fetch CSV: ${response.statusText}`);
+          throw new Error(`Failed to fetch voter data: ${response.statusText}`);
         }
 
-        const csvText = await response.text();
-        const lines = csvText.split("\n");
-
-        // Skip header row and parse data
-        const features: GeoJSON.Feature<GeoJSON.Point>[] = [];
-        const batchSize = 1000; // Process in batches to avoid blocking
-
-        // Process CSV in batches for better performance
-        for (let i = 1; i < lines.length; i += batchSize) {
-          const batch = lines.slice(i, i + batchSize);
-          
-          for (const line of batch) {
-            const trimmedLine = line.trim();
-            if (!trimmedLine) continue;
-
-            // Parse CSV line (handling quoted fields)
-            const values: string[] = [];
-            let current = "";
-            let inQuotes = false;
-
-            for (let j = 0; j < trimmedLine.length; j++) {
-              const char = trimmedLine[j];
-              if (char === '"') {
-                inQuotes = !inQuotes;
-              } else if (char === "," && !inQuotes) {
-                values.push(current);
-                current = "";
-              } else {
-                current += char;
-              }
-            }
-            values.push(current); // Push the last value
-
-            // Extract relevant fields (latitude is index 7, longitude is index 8)
-            if (values.length >= 9) {
-              const lat = parseFloat(values[7]);
-              const lon = parseFloat(values[8]);
-              const geocodeStatus = values[9]?.trim();
-
-              // Only include successfully geocoded points with valid coordinates
-              if (
-                !isNaN(lat) &&
-                !isNaN(lon) &&
-                geocodeStatus === "SUCCESS" &&
-                lat !== 0 &&
-                lon !== 0 &&
-                lat >= -90 &&
-                lat <= 90 &&
-                lon >= -180 &&
-                lon <= 180
-              ) {
-                features.push({
-                  type: "Feature",
-                  geometry: {
-                    type: "Point",
-                    coordinates: [lon, lat], // GeoJSON uses [longitude, latitude]
-                  },
-                  properties: {
-                    address: values[1] || "",
-                    city: values[2] || "",
-                    state: values[3] || "",
-                    zipcode: values[4] || "",
-                    party_affiliation: values[5] || undefined,
-                    geocode_status: geocodeStatus,
-                    latitude: lat,
-                    longitude: lon,
-                  },
-                });
-              }
-            }
-          }
-
-          // Yield to browser between batches
-          if (i + batchSize < lines.length) {
-            await new Promise((resolve) => setTimeout(resolve, 0));
-          }
-        }
-
-        setVoterData({
-          type: "FeatureCollection",
-          features,
-        });
+        // Parse GeoJSON directly - much faster than CSV parsing
+        const geojsonData = await response.json();
+        
+        setVoterData(geojsonData);
       } catch (err) {
         console.error("Error loading voter data:", err);
         setError(
@@ -392,13 +315,38 @@ export function VoterPointsLayer() {
     loadVoterData();
   }, []);
 
+  // Show loading indicator
   if (loading) {
-    return null; // MapClusterLayer will handle rendering once data is loaded
+    return (
+      <div className="absolute inset-0 flex items-center justify-center bg-background/80 backdrop-blur-sm z-50 pointer-events-none">
+        <div className="bg-card border rounded-lg p-6 shadow-lg">
+          <div className="flex flex-col items-center gap-3">
+            <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-primary"></div>
+            <p className="text-sm font-medium">Loading voter data...</p>
+            <p className="text-xs text-muted-foreground">
+              ~158,000 voter locations
+            </p>
+          </div>
+        </div>
+      </div>
+    );
   }
 
+  // Show error message
   if (error) {
-    console.error("Voter data error:", error);
-    return null;
+    return (
+      <div className="absolute inset-0 flex items-center justify-center bg-background/80 backdrop-blur-sm z-50 pointer-events-none">
+        <div className="bg-card border border-destructive rounded-lg p-6 shadow-lg max-w-md">
+          <div className="flex flex-col items-center gap-3 text-center">
+            <div className="text-destructive text-2xl">⚠️</div>
+            <p className="text-sm font-medium text-destructive">
+              Failed to load voter data
+            </p>
+            <p className="text-xs text-muted-foreground">{error}</p>
+          </div>
+        </div>
+      </div>
+    );
   }
 
   if (!voterData || voterData.features.length === 0) {
